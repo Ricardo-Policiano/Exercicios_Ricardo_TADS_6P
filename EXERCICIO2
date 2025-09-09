@@ -1,0 +1,30 @@
+# Exercicios_Ricardo_TADS_6P
+Programação Arduino
+
+int digital = 7;
+int analog = A0;
+int led = 4;
+
+void setup() {
+pinMode(led, OUTPUT);
+digitalWrite(led, LOW);
+Serial.begin(9600);
+pinMode(analog,INPUT);
+pinMode(digital,INPUT);
+}
+
+void loop() {
+  int valorDigital = digitalRead(digital);
+  int valorAnalog = analogRead(analog);
+  if (valorAnalog > 300){
+    digitalWrite(led, HIGH);
+    Serial.println("Noite");
+  }
+  else{
+    digitalWrite(led, LOW);
+    Serial.println("Dia");
+  }
+  delay(100);
+  //Serial.println(valorAnalog);
+
+}

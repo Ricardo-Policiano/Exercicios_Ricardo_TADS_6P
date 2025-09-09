@@ -1,2 +1,0 @@
-# Exercicios_Ricardo_TADS_6P
-Programação Arduino
